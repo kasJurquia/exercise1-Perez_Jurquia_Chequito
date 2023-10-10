@@ -1,67 +1,105 @@
 <template>
-  <table class="table table-striped">
-    <thead>
-      <tr>
-        <th scope="col">#</th>
-        <th scope="col">First</th>
-        <th scope="col">Last</th>
-        <th scope="col">Handle</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td>Angelica</td>
-        <td>Perez</td>
-        <td>@mdo</td>
-      </tr>
-      <tr>
-        <th scope="row">2</th>
-        <td>Kasandra</td>
-        <td>Jurquia</td>
-        <td>@fat</td>
-      </tr>
-      <tr>
-        <th scope="row">3</th>
-        <td>Leynard</td>
-        <td>Chequito</td>
-        <td>@twitter</td>
-      </tr>
-      <tr>
-        <th scope="row">3</th>
-        <td>Dyze</td>
-        <td>Malaluan</td>
-        <td>@twitter</td>
-      </tr>
-    </tbody>
-  </table>
+  <v-container>
+    <v-row justify="center">
+      <v-col cols="12">
+        <h1 class="meet-the-team-header">BORAHAE's FOUNDER</h1>
+      </v-col>
+    </v-row>
+    <v-row>
+      <v-col cols="12" sm="6" md="3" v-for="(person, index) in people" :key="index">
+        <v-card class="twitter-card">
+          <v-img
+            :src="require(`@/assets/groupmates/${person.avatar}`)"
+            alt="Member's Avatar"
+            height="200"
+            contain
+          ></v-img>
+          <v-card-title class="text-center">
+            <h5 class="card-title">{{ person.name }}</h5>
+            <h6 class="card-subtitle mb-2 text-muted">{{ person.handle }}</h6>
+          </v-card-title>
+          <v-card-text>
+            <p class="card-text text-md-center">{{ person.description }}</p>
+            <p class="developer-description">{{ person.developerDescription }}</p>
+          </v-card-text>
+        </v-card>
+      </v-col>
+    </v-row>
+  </v-container>
 </template>
 
-<style>
-.table {
-  width: 100%;
-  max-width: 100%;
-  margin-bottom: 1rem;
-  background-color: #f5f5f5;
-  border-collapse: collapse;
+<script>
+export default {
+  data() {
+    return {
+      people: [
+        {
+          name: 'Angelica Perez',
+          handle: '@mdo',
+          description: 'Description for Angelica.',
+          developerDescription: 'Frontend Developer with expertise in Vue.js and UI design.',
+          avatar: 'ange.png',
+        },
+        {
+          name: 'Kasandra Jurquia',
+          handle: '@fat',
+          description: 'Description for Kasandra.',
+          developerDescription: 'Full-stack Developer specializing in Node.js and React.',
+          avatar: 'kas.png',
+        },
+        {
+          name: 'Leynard Chequito',
+          handle: '@twitter',
+          description: 'Description for Leynard.',
+          developerDescription: 'Backend Developer experienced in Python and Django.',
+          avatar: 'cheq.png',
+        },
+        {
+          name: 'Dyze Malaluan',
+          handle: '@twitter',
+          description: 'Description for Dyze.',
+          developerDescription: 'Mobile App Developer with skills in React Native.',
+          avatar: 'dyze.png',
+        },
+      ],
+    };
+  },
+};
+</script>
+
+<style scoped>
+.meet-the-team-header {
+  font-family: 'Special Elite', cursive;
+  text-align: center;
+  font-size: 32px;
+  margin-top: 20px;
 }
 
-.table thead th {
-  background-color: #007bff;
-  color: white;
+.twitter-card {
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease-in-out;
 }
 
-.table tbody tr {
-  background-color: #fff;
+.twitter-card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.table tbody tr:nth-child(odd) {
-  background-color: #e9f5ff;
+.card-title {
+  font-size: 1.25rem;
+  margin-bottom: 0;
 }
 
-.table th,
-.table td {
-  padding: 0.75rem;
-  text-align: left;
+.card-subtitle {
+  color: #555;
+}
+
+.card-text {
+  color: #333;
+}
+
+.developer-description {
+  font-style: italic;
+  color: #777;
 }
 </style>

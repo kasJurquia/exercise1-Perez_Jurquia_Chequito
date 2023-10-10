@@ -1,6 +1,6 @@
 <template>
     <v-app-bar app color="indigo-darken-4">
-        <v-toolbar-title class="text-h3 special-elite-font">BORAHAE</v-toolbar-title>
+        <v-toolbar-title class="text-h5 special-elite-font">BORAHAE</v-toolbar-title>
         <v-spacer></v-spacer>
         <v-app-bar-nav-icon @click="toggleDrawer"></v-app-bar-nav-icon>
     </v-app-bar>
