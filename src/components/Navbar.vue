@@ -1,10 +1,10 @@
 <template>
+  
     <v-app-bar app color="indigo-darken-4">
-        <v-toolbar-title class="text-h3 special-elite-font">BORAHAE</v-toolbar-title>
+        <v-toolbar-title class="special-elite-font pt-2">BORAHAE</v-toolbar-title>
         <v-spacer></v-spacer>
         <v-app-bar-nav-icon @click="toggleDrawer"></v-app-bar-nav-icon>
     </v-app-bar>
-
 
 
 
@@ -25,6 +25,7 @@
             <v-list-item prepend-icon="mdi-account" title="Manage" value="account" to="/manage"></v-list-item>
         </v-list>
     </v-navigation-drawer>
+
 
 
 
@@ -62,5 +63,9 @@ export default {
 <style>
 .special-elite-font {
   font-family: 'Special Elite', cursive;
+  /* text-align: center; */
+  font-size: 27px;
+  padding-left: 20px;
+  /* Adjust the font size as needed */
 }
 </style>
