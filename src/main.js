@@ -3,14 +3,11 @@ import App from './App.vue'
 import router from './router'
 import vuetify from './plugins/vuetify'
 import { loadFonts } from './plugins/webfontloader'
-import 'bootsrap/dist/css/bootstrap.css'
+
+
+import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap/dist/js/bootstrap.js'
 import bootsrap from 'bootstrap/dist/js/bootstrap.bundle.js'
-
-
-
-
-
 
 
 
