@@ -1,31 +1,29 @@
 <template>
-  <v-container>
-    <v-row justify="center">
-      <v-col cols="12">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12">
         <h1 class="meet-the-team-header">BORAHAE's FOUNDER</h1>
-      </v-col>
-    </v-row>
-    <v-row>
-      <v-col cols="12" sm="6" md="3" v-for="(person, index) in people" :key="index">
-        <v-card class="twitter-card">
-          <v-img
+      </div>
+    </div>
+    <div class="row">
+      <div v-for="(person, index) in people" :key="index" class="col-12 col-sm-6 col-md-3">
+        <div class="card twitter-card">
+          <img
             :src="require(`@/assets/groupmates/${person.avatar}`)"
             alt="Member's Avatar"
             height="200"
-            contain
-          ></v-img>
-          <v-card-title class="text-center">
+            class="card-img-top"
+          >
+          <div class="card-body text-center">
             <h5 class="card-title">{{ person.name }}</h5>
             <h6 class="card-subtitle mb-2 text-muted">{{ person.handle }}</h6>
-          </v-card-title>
-          <v-card-text>
-            <p class="card-text text-md-center">{{ person.description }}</p>
+            <p class="card-text">{{ person.description }}</p>
             <p class="developer-description">{{ person.developerDescription }}</p>
-          </v-card-text>
-        </v-card>
-      </v-col>
-    </v-row>
-  </v-container>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>

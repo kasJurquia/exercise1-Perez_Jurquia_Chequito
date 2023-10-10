@@ -6,17 +6,7 @@
         <v-app-bar-nav-icon @click="toggleDrawer"></v-app-bar-nav-icon>
     </v-app-bar>
 
-
-
     <v-navigation-drawer v-model="drawer" permanent location="right">
-        <!-- <template v-slot:prepend>
-          <v-list-item
-            lines="two"
-            prepend-avatar="@/assets/groupmates/cheq.png"
-            title="Jane Smith"
-            subtitle="Logged in"
-          ></v-list-item>
-        </template> -->
 
         <v-divider></v-divider>
 
@@ -26,23 +16,6 @@
         </v-list>
     </v-navigation-drawer>
 
-
-
-
-
-    <!-- <v-navigation-drawer v-model="drawer" location = "right">
-        <v-list>
-          <v-list-item>
-            <v-list-item-title>Home</v-list-item-title>
-          </v-list-item>
-          <v-list-item>
-            <v-list-item-title>About</v-list-item-title>
-          </v-list-item>
-          <v-list-item>
-            <v-list-item-title>Contact</v-list-item-title>
-          </v-list-item>
-        </v-list>
-      </v-navigation-drawer> -->
 </template>
   
 <script>
@@ -63,9 +36,7 @@ export default {
 <style>
 .special-elite-font {
   font-family: 'Special Elite', cursive;
-  /* text-align: center; */
   font-size: 27px;
   padding-left: 20px;
-  /* Adjust the font size as needed */
 }
 </style>

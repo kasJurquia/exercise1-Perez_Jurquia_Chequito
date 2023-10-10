@@ -1,13 +1,12 @@
 <template>
   <v-container>
-    <!-- Header -->
+
     <v-row justify="center">
       <v-col cols="12">
         <h1 class="meet-the-team-header">Meet The Team</h1>
       </v-col>
     </v-row>
 
-    <!-- Team Members -->
     <v-row>
       <v-col v-for="member in teamMembers" :key="member.id" cols="12" sm="6" md="3">
         <v-card>
@@ -46,7 +45,6 @@ export default {
           role: 'Developer',
           avatar: 'dyze.png',
         },
-        // Add more team members here
       ],
     };
   },
@@ -54,14 +52,10 @@ export default {
 </script>
 
 <style scoped>
-/* Add custom CSS styles here if needed */
 .meet-the-team-header {
   font-family: 'Special Elite', cursive;
-  /* Use the Special Elite font */
   text-align: center;
   font-size: 32px;
-  /* Adjust the font size as needed */
   margin-top: 20px;
-  /* Add spacing to separate the header from team members */
 }
 </style>
